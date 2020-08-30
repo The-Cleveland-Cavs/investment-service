@@ -1,6 +1,6 @@
 #!/bin/sh
 ## Environment Vars read by application
-export DATABASE_URL='postgres://subscription:3xpapp5ub@localhost:5432/subscription'
+export DATABASE_URL='postgres://investment:invest@localhost:5432/investment'
 export MIGRATE_DB=true
 export BUILD_TARGET_ID='local'
 
