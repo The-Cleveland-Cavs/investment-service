@@ -1,16 +1,16 @@
-import investment.service.InvestmentSpec
+import investment.service.Investment
 
 model {
-    InvestmentSpec investmentSpec
+    Investment investment
 }
 
 json {
-    id investmentSpec.id
-    interestRate investmentSpec.interestRate
-    downPaymentPercentage investmentSpec.downPaymentPercentage
-    estimatedRentalIncomePerMonth investmentSpec.estimatedRentalIncomePerMonth
-    estimatedTaxSavings investmentSpec.estimatedTaxSavings
-    interestRate investmentSpec.interestRate
-    pmiRate investmentSpec.pmiRate
-    propertyPrice investmentSpec.propertyPrice
+    id investment.id
+    interestRate investment.interestRate
+    downPaymentPercentage investment.downPaymentPercentage
+    estimatedRentalIncomePerMonth investment.estimatedRentalIncomePerMonth
+    estimatedTaxSavings investment.estimatedTaxSavings
+    interestRate investment.interestRate
+    pmiRate investment.pmiRate
+    propertyPrice investment.propertyPrice
 }

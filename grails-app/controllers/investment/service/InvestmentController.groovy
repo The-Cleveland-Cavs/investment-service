@@ -1,14 +1,12 @@
 package investment.service
 
 class InvestmentController {
-	static responseFormats = ['json', 'xml']
-	
     def index() {
 
     }
 
     def show() {
-        InvestmentSpec spec = new InvestmentSpec(
+        Investment investment = new Investment(
             downPaymentPercentage: 10,
             estimatedRentalIncomePerMonth: 1000,
             estimatedTaxSavings: 1000,
@@ -16,7 +14,7 @@ class InvestmentController {
             pmiRate: 5,
             propertyPrice: 200000
         )
-        [investmentSpec: spec]
+        [investment: investment]
     }
 
     def create() {

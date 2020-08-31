@@ -1,7 +1,7 @@
-import investment.service.InvestmentSpec
+import investment.service.Investment
 
 model {
-    InvestmentSpec investmentSpec
+    Investment investment
 }
 
-json tmpl.investment(investmentSpec)
+json tmpl.investment(investment)
