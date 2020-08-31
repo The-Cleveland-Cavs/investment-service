@@ -11,7 +11,8 @@ dataSource {
 
     dbCreate = (SystemProperty.getEnvProperty('DB_CREATE')) ?: "none"
     url = "jdbc:" + ConfigHelper.convertDatabaseUrl(
-            SystemProperty.getEnvProperty('DATABASE_URL') ?:'postgres://investment:invest@localhost:5432/investment'
+        'postgresql://investment:invest@localhost:5432/investment',
+        'investment-service'
     )
 }
 
