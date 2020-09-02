@@ -1,7 +1,7 @@
 databaseChangeLog = {
 
     changeSet(author: "spencerpowell (generated)", id: "1578509340288-1") {
-        createTable(tableName: "user") {
+        createTable(tableName: "investment_user") {
             column(autoIncrement: "true", name: "id", type: "BIGINT") {
                 constraints(primaryKey: "true", primaryKeyName: "userPK")
             }
