@@ -4,6 +4,7 @@ grails:
     codegen:
         defaultPackage: investment.service
     gorm:
+        failOnError: true
         reactor:
             # Whether to translate GORM events into Reactor events
             # Disabled by default for performance reasons
@@ -71,30 +72,3 @@ grails:
         encoding: UTF-8
 
 ---
-hibernate:
-    cache:
-        queries: false
-        use_second_level_cache: false
-        use_query_cache: false
-dataSource:
-    url: ${DATABASE_URL}
-    type: com.zaxxer.hikari.HikariDataSource
-    pooled: true
-    dialect:  net.kaleidos.hibernate.PostgresqlExtensionsDialect
-    jmxExport: true
-    driverClassName: org.postgresql.Driver
-    username: ${DATABASE_USER}
-    password: ${DATABASE_PASS}
-
-environments:
-    development:
-        dataSource:
-            logSql: false
-            dbCreate: none
-            ssl: false
-    test:
-        dataSource:
-            dbCreate: update
-            ssl: false
-            url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-

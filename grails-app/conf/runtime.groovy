@@ -1,4 +1,3 @@
-import investment.service.ConfigHelper
 import investment.service.SystemProperty
 
 dataSource {
@@ -10,10 +9,9 @@ dataSource {
     logSql = false
 
     dbCreate = (SystemProperty.getEnvProperty('DB_CREATE')) ?: "none"
-    url = "jdbc:" + ConfigHelper.convertDatabaseUrl(
-        'postgresql://investment:invest@localhost:5432/investment',
-        'investment-service'
-    )
+    username = "investment"
+    password = "investor"
+    url = "jdbc:postgresql://localhost:5432/investment"
 }
 
 hibernate {
@@ -36,17 +34,8 @@ environments {
 
     test {
         dataSource {
-            if (SystemProperty.getEnvProperty('INTEGRATION_TEST_ENABLED')) {
-                driverClassName = "org.postgresql.Driver"
-                dialect = net.kaleidos.hibernate.PostgresqlExtensionsDialect
-                username = "investment"
-                password = "invest"
-                url = "jdbc:postgresql://localhost:5432/investment"
-                logSql = true
-            } else {
-                dbCreate = "update"
-                url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
-            }
+            dbCreate = "update"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
         }
     }
 
