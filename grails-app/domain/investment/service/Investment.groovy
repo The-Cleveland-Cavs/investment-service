@@ -9,6 +9,15 @@ class Investment {
     Integer pmiRate = 0
     Integer propertyPrice
 
+    InvestmentUser investmentUser
+
+    Date dateCreated
+    Date lastUpdated
+
+    static mapping = {
+        version false
+    }
+
     static constraints = {
         downPaymentPercentage nullable: true
         estimatedRentalIncomePerMonth nullable: false
@@ -16,5 +25,6 @@ class Investment {
         interestRate nullable: true
         pmiRate nullable: true
         propertyPrice nullable: false
+        investmentUser nullable: true
     }
 }

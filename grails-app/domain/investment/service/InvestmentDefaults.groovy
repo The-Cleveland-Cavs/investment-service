@@ -9,6 +9,15 @@ class InvestmentDefaults {
     Integer pmiRate
     Integer propertyPrice
 
+    Date dateCreated
+    Date lastUpdated
+
+    static belongsTo = [investmentUser: InvestmentUser]
+
+    static mapping = {
+        version false
+    }
+
     static constraints = {
         downPaymentPercentage nullable: true
         estimatedRentalIncomePerMonth nullable: true
@@ -16,5 +25,6 @@ class InvestmentDefaults {
         interestRate nullable: true
         pmiRate nullable: true
         propertyPrice nullable: true
+        investmentUser nullable: true
     }
 }

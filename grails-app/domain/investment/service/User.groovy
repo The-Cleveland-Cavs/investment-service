@@ -1,12 +1,21 @@
 package investment.service
 
-class User {
+class InvestmentUser {
 
     String email
     String firstName
     String lastName
     String password
     boolean active = true
+
+    Date dateCreated
+    Date lastUpdated
+
+    static hasMany = [investments: Investment]
+
+    static mapping = {
+        version false
+    }
 
     static constraints = {
         email nullable: false

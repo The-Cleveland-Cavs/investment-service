@@ -1,0 +1,7 @@
+import investment.service.Investment
+
+model {
+    Investment investment
+}
+
+json tmpl.investment(investment)

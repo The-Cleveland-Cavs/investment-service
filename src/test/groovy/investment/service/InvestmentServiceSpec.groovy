@@ -1,9 +1,9 @@
 package investment.service
 
-import grails.testing.gorm.DomainUnitTest
+import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class InvestmentUserSpec extends Specification implements DomainUnitTest<InvestmentUser> {
+class InvestmentServiceSpec extends Specification implements ServiceUnitTest<InvestmentService>{
 
     def setup() {
     }
